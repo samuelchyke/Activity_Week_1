@@ -8,6 +8,7 @@ import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.Objects;
 import java.util.regex.Matcher;
@@ -84,6 +85,11 @@ public class LoginActivity extends AppCompatActivity {
             mErrorEmail.setVisibility(View.VISIBLE);
         }
 
+        if (!isValid(mEditTextEmail.getText().toString())){
+            Toast.makeText(getApplicationContext(), "Email is not valid",
+                    Toast.LENGTH_LONG).show();
+        }
+
     }
 
     private void passwordCheck(){
@@ -142,5 +148,16 @@ public class LoginActivity extends AppCompatActivity {
             isValid = false;
         }
         return isValid;
+    }
+
+    public static boolean isValid(String email)
+    {
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@" +  //part before @
+                "(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+
+        Pattern pat = Pattern.compile(emailRegex);
+        if (email == null)
+            return false;
+        return pat.matcher(email).matches();
     }
 }

@@ -4,8 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="50dp"
     android:background="@drawable/border"
-    android:id="@+id/errorEmail"
-    android:backgroundTint="@color/black">
+    android:id="@+id/errorEmail">
 
     <ImageView
         android:paddingLeft="5dp"
