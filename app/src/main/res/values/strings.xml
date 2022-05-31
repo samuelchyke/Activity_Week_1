@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Green Flag</string>
+    <string name="welcome">Green Flag customers can create an account to access</string>
+    <string name="create">Create an account</string>
+    <string name="Car">Car health updates</string>
+    <string name="Request">Request a rescue online</string>
+    <string name="Policy">Policy Information</string>
+    <string name="Password">"Your password should have a minimum of 8 character and contain at least one number, one uppercase and one lower case letter. You can use special characters</string>
+    <string name="PasswordMismatch">"One of the passwords you entered wasn't valid"</string>
+    <string name="PasswordMismatchTwo">"Your passwords don't match"</string>
+    <string name="Email">"An account already exist for the email address"</string>
+</resources>
